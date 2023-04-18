@@ -266,11 +266,11 @@ void DWIN_ICON_Show(bool IBD, bool BIR, bool BFI, uint16_t x, uint16_t y, uint16
   NOMORE(x, DWIN_WIDTH - 1);
   NOMORE(y, DWIN_HEIGHT - 1);
   size_t i = 0;
-  DWIN_Byte(i, 0x24);
-  //DWIN_Byte(i, 0x70);
+  //DWIN_Byte(i, 0x24);
+  DWIN_Byte(i, 0x70);
   DWIN_Word(i, x);
   DWIN_Word(i, y);
-  DWIN_Byte(i, (IBD << 7) | (BIR << 6) | (BFI << 5) | 0x00);
+  //DWIN_Byte(i, (IBD << 7) | (BIR << 6) | (BFI << 5) | 0x00);
   DWIN_Word(i, addr);
   DWIN_Send(i);
 }
