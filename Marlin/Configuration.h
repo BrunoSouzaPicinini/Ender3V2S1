@@ -1550,7 +1550,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -48, -9, -2.8 }  // BLTouch offset for support Minimus: https://cults3d.com/en/3d-model/tool/minimus-hotend-cooler-system (z-offset = -2.80 mm)  // Manual mesh use the nozzle as probe
+#define NOZZLE_TO_PROBE_OFFSET { -48, -9, -2.83 }  // BLTouch offset for support Minimus: https://cults3d.com/en/3d-model/tool/minimus-hotend-cooler-system (z-offset = -2.80 mm)  // Manual mesh use the nozzle as probe
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -3265,12 +3265,15 @@
 //
 //#define DWIN_CREALITY_LCD           // Creality UI
 #define DWIN_LCD_PROUI              // Pro UI by MRiscoC
+#define DACAI_DISPLAY
 #define USE_STOCK_DWIN_SET
 
 // Professional firmware features:
 #define ProUIex 1
 #if ProUIex
-  #define HAS_GCODE_PREVIEW 1
+  #if NONE(TJC_DISPLAY, SYNWIT_DISPLAY)
+    #define HAS_GCODE_PREVIEW 1
+  #endif
   #define HAS_TOOLBAR 1
 #endif
 #define HAS_PLOT 1
@@ -3286,6 +3289,7 @@
 //#define JD_TUNE_ITEM  // Enable only if Juntion Deviation is enabled
 //#define ADVK_TUNE_ITEM  // Enable only if Linear Advance is enabled
 //#define MEDIASORT_MENU_ITEM  // Allows enable/disable file list sorting
+//#define CCLOUD_PRINT_SUPPORT  // Allows enable/disable Creative Cloud Print Support
 
 //#define DWIN_CREALITY_LCD_JYERSUI   // Jyers UI by Jacob Myers
 //#define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
