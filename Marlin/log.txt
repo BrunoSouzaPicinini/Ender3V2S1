@@ -1,9 +1,9 @@
 Configurations generator script for the Professional Firmware
 Author: Miguel A. Risco Castillo (c) 2022
 
--Process AlexioConfiguration/Configuration.h
--Process AlexioConfiguration/Configuration_adv.h
--Process AlexioConfiguration/Version.h
--Process AlexioConfiguration/platformio.ini
+-Process AlexioConfiguration_SMT32/Configuration.h
+-Process AlexioConfiguration_SMT32/Configuration_adv.h
+-Process AlexioConfiguration_SMT32/Version.h
+-Process AlexioConfiguration_SMT32/platformio.ini
 
 Configuration files correctly generated
